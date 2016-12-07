@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launcher_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="32dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fi.teemutt.hydroid.activities.LauncherActivity"
+    tools:showIn="@layout/activity_launcher">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                style="@android:style/DeviceDefault.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_cancel_white"
+                android:onClick="quitClicked"
+                android:text="Quit"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                style="@android:style/DeviceDefault.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_ok_white"
+                android:onClick="doneClicked"
+                android:text="Done"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:text="Thank you for using Hydroid"
+        android:textColor="#eeffffff"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:text="Let's sort a few things out..."
+        android:textColor="#eeffffff"
+        android:textSize="18sp"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <fragment
+            android:id="@+id/profileFragment"
+            class="fi.teemutt.hydroid.activities.ProfileFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/content_profile"/>
+    </FrameLayout>
+
+</RelativeLayout>

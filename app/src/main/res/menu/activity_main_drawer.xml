@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_calendar"
+            android:title="Statistics"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"/>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Your profile"/>
+
+    </group>
+
+    <item android:title="Developer settings">
+        <menu>
+            <item
+                android:id="@+id/nav_launcher_activity"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="Start LauncherActivity"/>
+
+            <item
+                android:id="@+id/nav_reset_setup"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="Reset setup variable"/>
+
+            <item
+                android:id="@+id/nav_reset_database"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="Reset database"/>
+
+            <item
+                android:id="@+id/nav_create_data"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="Create test data"/>
+
+        </menu>
+    </item>
+
+
+</menu>

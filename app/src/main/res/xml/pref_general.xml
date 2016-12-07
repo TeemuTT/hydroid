@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pref_reminders"
+        android:summary="@string/pref_description_reminders"
+        android:title="@string/pref_title_reminders"/>
+
+    <ListPreference
+        android:defaultValue="3"
+        android:dependency="pref_reminders"
+        android:dialogTitle="Reminder interval"
+        android:entries="@array/pref_notify_interval_entries"
+        android:entryValues="@array/pref_notify_interval_values"
+        android:key="pref_notify_interval"
+        android:title="@string/pref_title_notify_interval"/>
+
+</PreferenceScreen>
